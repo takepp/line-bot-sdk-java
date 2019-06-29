@@ -38,7 +38,17 @@ public class EchoApplication {
     public Message handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         System.out.println("event: " + event);
         final String originalMessageText = event.getMessage().getText();
-        return new TextMessage(originalMessageText);
+        
+        final String addMessage = "@takeuchi";
+        
+        StringBuilder str = new StringBuilder();
+        
+        str.append(originalMessageText);
+        str.append(addMessage);
+        
+        final String orginalMess = str.toString()
+        
+        return new TextMessage(orginalMess);
     }
 
     @EventMapping
