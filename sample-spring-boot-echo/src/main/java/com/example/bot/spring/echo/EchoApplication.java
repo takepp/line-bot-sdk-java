@@ -46,7 +46,7 @@ public class EchoApplication {
         str.append(originalMessageText);
         str.append(addMessage);
         
-        final String orginalMess = str.toString()
+        final String orginalMess = str.toString();
         
         return new TextMessage(orginalMess);
     }
